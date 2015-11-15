@@ -1,0 +1,59 @@
+/* ----------- SETUP -------------- */	
+/* **************** IMPORTS ************************ */
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/transition"
+@import "compass/css3/font-face"
+@import "compass/css3/images"
+@import "compass/css3/text-shadow"
+@import "compass/css3/transform"
+@import "compass/utilities/general/hacks"
+@import "compass/css3/opacity"
+@import "compass/css3/box-sizing"
+@import "mixins.sass"
+
+/* **************** VARIABLES ************************ */
+$color: #bd9a00 //gold
+$color-hover: #8db3c4 //blue
+$special-color1: #2c8aa3 //darker blue
+$special-color2: #d4f5ff //light blue
+$special-color2-hover: lighten(#d4f5ff, 5) // lighter blue
+$special-color3: #dfebb7 // light green
+$special-color3-hover: lighten(#dfebb7, 5) // lighter green
+$special-color4: #41d1eb // reverse light blue
+$special-color4-hover: lighten(#41d1eb, 10) // reverse light blue
+$contrast: white
+
+/* **************** FONT FACE ************************ */
+@font-face
+	font-family: 'montserrat_regular'
+	src: url('../fonts/montserrat-regular-webfont.eot')
+	src: url('../fonts/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-regular-webfont.woff') format('woff'), url('../fonts/montserrat-regular-webfont.ttf') format('truetype'), url('../fonts/montserrat-regular-webfont.svg#glober-semibold') format('svg')
+	font-weight: normal
+	font-style: normal
+
+%montserrat_regular
+	font-family: "montserrat_regular", Verdana, sans-serif
+	font-weight: normal
+
+@font-face
+	font-family: 'montserrat_bold'
+	src: url('../fonts/montserrat-bold-webfont.eot')
+	src: url('../fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-bold-webfont.woff') format('woff'), url('../fonts/montserrat-bold-webfont.ttf') format('truetype'), url('../fonts/montserrat-bold-webfont.svg#glober-semibold') format('svg')
+	font-weight: normal
+	font-style: normal
+
+%montserrat_bold
+	font-family: "montserrat_bold", Verdana, sans-serif
+	font-weight: normal
+
+@font-face
+	font-family: 'montserrat_hairline'
+	src: url('../fonts/montserrat-hairline-webfont.eot')
+	src: url('../fonts/montserrat-hairline-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-hairline-webfont.woff') format('woff'), url('../fonts/montserrat-hairline-webfont.ttf') format('truetype'), url('../fonts/montserrat-hairline-webfont.svg#glober-semibold') format('svg')
+	font-weight: normal
+	font-style: normal
+
+%montserrat_hairline
+	font-family: "montserrat_hairline", Verdana, sans-serif
+	font-weight: normal

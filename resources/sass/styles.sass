@@ -1,0 +1,318 @@
+@import "_base"
+
+/* ******************* GENERAL ********************** */
+body
+	@extend %montserrat_regular
+.vertical_center
+	@include box-sizing(border-box)
+	position: absolute
+	top: 50%
+	@include transform(translateY(-50%))
+img
+	display: block
+	margin: 0 auto
+.banner
+	background: url('../images/banner_bkg.jpg') no-repeat center center
+	background-size: cover
+	h3
+		text-align: center
+	img
+		width: 60%
+.buttonframe
+	@include border-radius (4px)
+	padding: 5px 10px
+h2
+	color: #EF7F2A
+	@extend %montserrat_bold
+	font-size: 24px
+	border-bottom: solid 1px #EF7F2A
+	padding-bottom: 15px
+/* ******************* Navbar ********************** */
+.navbar-default
+	background: #fff
+	border-bottom: 1px solid #EF7F2A
+	.navbar-nav
+		>li
+			>a
+				color: #1D6690
+				&:hover
+					color: #EF7F2A
+			.login
+				@extend .buttonframe
+				border: 1px solid #1D6690
+				margin: 10px 0 0
+				display: inline-block
+				&:hover
+					border-color: #EF7F2A
+.navbar-nav.navbar-right:last-child
+	margin-right: 20px
+.navbar-brand
+	padding: 5px 15px 0
+	position: absolute
+/* ******************* Home Banner ********************** */	
+.home_banner
+	background: url('../images/banner_bkg.jpg')
+	background-size: cover
+	padding: 150px 0
+	.stripe
+		@include background-image(linear-gradient(to right, rgba(26, 40, 73, .7) 50%, rgba(13, 26, 51, .8) 50.1%))
+		padding: 60px 0
+	label, select, input
+		width: 100%
+	h1
+		color: #fff
+		font-size: 60px
+		@extend %montserrat_bold
+		text-align: center
+	h2
+		color: #EF7F2A
+		font-size: 30px
+		text-align: center
+	label
+		color: #7CC4E2
+		font-size: 16px
+		text-align: right
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	select, input
+		font-size: 16px
+		
+		margin-bottom: 20px
+	select
+		@extend %montserrat_hairline
+	input
+		border: none
+		color: #fff
+		background: #EF7F2A
+		@extend .buttonframe
+		&:hover
+			background: #F9914B
+/* ******************* Home Plan ********************** */
+.home_plan
+	margin-bottom: 100px
+	text-align: center
+	h2
+		margin: 70px 0 60px
+		color: #EF7F2A
+		@extend %montserrat_hairline
+	.row
+		h3
+			font-size: 22px
+			margin: 100px 0
+		.economy
+			background: #efefef
+			color: #7CC4E2
+			text-align: center
+			h3
+				&:before
+					content: " "
+					background: url('../images/balls.png') left top
+					width: 33px
+					height: 34px
+					margin-bottom: 20px
+					display: block
+					margin: 0 auto
+		.standard
+			border: 3px solid #fff
+			border-top: none
+			border-botton: none
+			background: #efefef
+			color: #3488B4
+			text-align: center
+			h3
+				&:before
+					content: " "
+					background: url('../images/balls.png') left top
+					width: 70px
+					margin-bottom: 20px
+					height: 34px
+					display: block
+					margin: 0 auto
+		.premium
+			background: #efefef
+			color: #1D6690
+			text-align: center
+			h3
+				&:before
+					content: " "
+					background: url('../images/balls.png') left top
+					width: 106px
+					height: 34px
+					margin-bottom: 20px
+					display: block
+					margin: 0 auto
+		.compare
+			cursor: pointer
+			@extend .buttonframe
+			background: #3488B4
+			@include box-shadow(2px 2px 4px #ccc)
+			display: inline-block
+			font-size: 22px
+			color: #fff
+			margin-top: 20px
+			&:hover
+				text-decoration: none
+				background: lighten(#3488B4, 10%)
+
+/* ******************* Home Claim ********************** */
+.home_claim
+	margin-bottom: 100px
+	.row
+		>div
+			background: #3488B4
+			height: 250px
+			text-align: center
+			@include box-shadow(5px 5px 10px #ccc)
+		.claim_pic
+			background-image: url('../images/claim_pic.jpg')
+			background-size: cover
+		.vertical_center
+			left: 50%
+			@include transform(translateX(-50%) translateY(-50%))
+		h2
+			color: #fff
+			text-transform: uppercase
+		a
+			@extend .buttonframe
+			background: #f0f0f0
+			color: #EF7F2A
+			font-size: 20px
+			display: inline-block
+			margin: 20px auto 0
+			&:hover
+				text-decoration: none
+				background: #fff
+/* ******************* Modal Home ********************** */
+.modal
+	.modal-dialog
+		width: 80%
+		z-index: 10000
+		.modal-content
+			@include border-radius(0)
+			border: none
+			padding: 50px
+		.close
+			position: absolute
+			top: 4px
+			right: 10px
+		.container
+			width: 100%
+			.quote
+				text-align: right
+				.get_quote
+					@extend .buttonframe
+					background: #EF7F2A
+					color: #fff
+					font-size: 20px
+					@include box-shadow(2px 2px 4px #ccc)
+					margin: 30px 0
+					display: inline-block
+					&:hover
+						background: #EF7F2A
+				p
+					font-size: 14px
+					color: #3488B4
+					a
+						color: #EF7F2A
+
+/* ******************* PLAN TABLE ********************** */
+.plan_table
+	width: 100%
+	border-spacing: 2px
+	border-collapse: separate
+	th
+		@extend %montserrat_hairline
+		font-size: 14px
+		color: #000
+		text-align: right
+		padding: 10px 15px
+	td
+		background: #3488B4
+		padding: 10px 15px
+		color: #fff
+		text-transform: uppercase
+		text-align: center
+		margin: 2px 0
+		&:nth-child(2)
+			background: #7CC4E2
+		&:last-child
+			background: #1D6690
+	.not_covered
+		color: #185472
+/* ******************* FOOTER ********************** */
+.footer
+	margin-bottom: 20px
+	.row
+		background: #768081
+		color: #CBE1E7
+		div
+			padding: 20px
+		a 
+			color: #CBE1E7
+		img
+			margin-top: 15px
+/* ******************* PROGRAM INFO ********************** */
+.program_info_banner
+	background: url('../images/program_info_banner_bkg.jpg')
+	background-size: cover
+	padding: 180px 0
+	text-align: center
+	h1
+		@extend %montserrat_hairline
+		color: #fff
+		font-size: 34px
+		text-transform: uppercase
+.program_info_basic_info
+	@include background-image(linear-gradient(to right, #EFEFEF 50%, #EF7F2A 50%))
+	padding-top: 40px
+	h3
+		color: #EF7F2A
+		font-size: 24px
+		text-align: center
+	p
+		color: #55626B
+		font-size: 14px
+		@extend %montserrat_hairline
+		margin-bottom: 50px
+	.orange
+		h3
+			color: #1D6690
+		li
+			color: #fff
+			@extend %montserrat_hairline
+		.bold
+			@extend %montserrat_regular
+
+/* ******************* RESPONSIVE ********************** */
+@media screen and (max-width: 768px)
+	.navbar-default 
+		.navbar-nav
+			>li
+				.login
+					margin-left: 15px
+	.home_banner
+		h1
+			font-size: 40px
+		h2
+			font-size: 25px
+			margin-bottom: 30px
+		.stripe
+			background-image: none
+			background-color: rgba(26, 40, 73, .7)
+	.home_plan 
+		.row 
+			>div
+				margin-top: 10px
+				margin-bottom: 10px
+				&:first-child
+					margin: 0
+				&:last-child
+					margin: 0
+				h3
+					margin: 30px 0
+	.home_claim
+		h2
+			font-size: 20px
+	.footer
+		margin-bottom: 0
